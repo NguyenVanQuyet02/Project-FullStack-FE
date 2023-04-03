@@ -33,6 +33,9 @@ class UserManage extends Component {
             isOpenModalUser: !this.state.isOpenModalUser,
         })
     }
+    createNewUser = () => {
+        alert('call me!!');
+    }
     render() {
         let arrUsers = this.state.arrUsers;
         return (
@@ -40,6 +43,7 @@ class UserManage extends Component {
                 <ModalUser
                     isOpen={this.state.isOpenModalUser}
                     toggleFromParent={this.toggleUserModel}
+                    createNewUser={this.createNewUser}
                 />
                 <div className='title'>
                     List Users
